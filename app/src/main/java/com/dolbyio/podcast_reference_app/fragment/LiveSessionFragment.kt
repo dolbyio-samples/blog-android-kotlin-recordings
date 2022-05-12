@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -50,7 +51,7 @@ class LiveSessionFragment : Fragment() {
     }
 
     private fun fetchConferences() {
-        val url = "https://android-di-token-server.netlify.app/api/conferences/"
+        val url = "https://android-di-token-server.netlify.app/api/getConferencesInfo/"
         val queue = Volley.newRequestQueue(PodcastApplication.applicationContext())
         val gson = GsonBuilder().setPrettyPrinting().create()
 
@@ -64,6 +65,13 @@ class LiveSessionFragment : Fragment() {
                 for (i in 0 until jsonArray.length()) {
                     val currentConference = jsonArray.get(i) as JSONObject
                     mPodcastConferences.add(PodcastConference.fromJSON(currentConference))
+                }
+                if (mPodcastConferences.isEmpty()) {
+                    Toast.makeText(
+                        PodcastApplication.applicationContext(),
+                        "There are no live sessions at the moment...",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
                 mAdapter.notifyDataSetChanged()
                 val json = gson.toJson(mPodcastConferences) // pretty print out json

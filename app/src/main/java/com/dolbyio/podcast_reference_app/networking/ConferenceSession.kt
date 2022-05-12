@@ -28,7 +28,7 @@ object ConferenceSession {
 
     fun fetchSecureToken(callback: (token: String?) -> Unit, tokenType: String = "client") {
         val serverURL =
-            "https://android-di-token-server.netlify.app/.netlify/functions/token-generator"
+            "https://android-di-token-server.netlify.app/.netlify/functions/getTokenGenerator"
         val queue = Volley.newRequestQueue(PodcastApplication.applicationContext())
 
         var request = object : JsonObjectRequest(
