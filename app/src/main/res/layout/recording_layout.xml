@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_layout_start"
+    android:layout_marginTop="@dimen/margin_layout_top"
+    android:layout_marginEnd="@dimen/margin_layout_end"
+    android:layout_marginBottom="@dimen/margin_layout_bottom"
+    android:elevation="@dimen/margin_12_dp"
+    app:cardCornerRadius="@dimen/margin_8_dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_16_dp">
+
+        <ImageButton
+            android:id="@+id/ib_play_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:contentDescription="@string/plays_conference_recording"
+            android:src="@drawable/ic_baseline_cloud_download_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_podcast_alias"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_layout_start"
+            android:text="@string/recorded_conference_name_here"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ib_play_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_duration_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_layout_start"
+            android:text="@string/duration"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ib_play_button"
+            app:layout_constraintTop_toBottomOf="@id/tv_podcast_alias" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_duration_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_podcast_alias"
+            tools:text="10 minutes 26 seconds" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_8_dp">8dp</dimen>
+    <dimen name="margin_12_dp">12dp</dimen>
+    <dimen name="margin_16_dp">16dp</dimen>
+    <dimen name="margin_32_dp">32dp</dimen>
+    <dimen name="margin_layout_start">8dp</dimen>
+    <dimen name="margin_layout_end">8dp</dimen>
+    <dimen name="margin_layout_top">8dp</dimen>
+    <dimen name="margin_layout_bottom">8dp</dimen>
+</resources>

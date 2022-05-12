@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="#666666">
+
+    <item
+        android:id="@+id/livePodcastsFragment"
+        android:icon="@drawable/ic_baseline_live_tv_24"
+        android:title="@string/live_podcasts"
+        app:cnb_iconColor="@color/red" />
+
+    <item
+        android:id="@+id/createPodcastFragment"
+        android:icon="@drawable/ic_baseline_mic_24"
+        android:title="@string/create_session"
+        app:cnb_iconColor="@color/dark_teal" />
+
+    <item
+        android:id="@+id/replayFragment"
+        android:icon="@drawable/ic_baseline_replay_24"
+        android:title="@string/replay"
+        app:cnb_iconColor="@color/orange" />
+
+</menu>

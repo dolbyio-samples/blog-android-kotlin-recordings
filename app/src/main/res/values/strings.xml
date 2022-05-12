@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">PodcastReferenceApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="participants">Participants:</string>
+    <string name="host_avatar_displayed_here">Host\'s avatar displayed here</string>
+    <string name="other_host_avatar_displayed_here">Other host avatar displayed here</string>
+    <string name="plays_conference_recording">Plays conference recording</string>
+    <string name="recorded_conference_name_here">Recorded conference name here</string>
+    <string name="replays">Replays Info</string>
+    <string name="live_now">LIVE Now...</string>
+    <string name="record_audio_button">Record audio button</string>
+    <string name="end_podcast">End podcast</string>
+    <string name="mute_mic">Mute Mic</string>
+    <string name="duration">Duration: </string>
+    <string name="live_podcasts">LIVE Podcasts</string>
+    <string name="create_session">Create Session</string>
+    <string name="replay">Replay</string>
+    <string name="other_host_video_off">Other host video off</string>
+    <string name="host_video_off">Host video off</string>
+    <string name="record_conference_audio_floating_action_button">Record conference audio floating action button</string>
+    <string name="podcast_name">Podcast Session</string>
+    <string name="join_session">Join session</string>
+</resources>
