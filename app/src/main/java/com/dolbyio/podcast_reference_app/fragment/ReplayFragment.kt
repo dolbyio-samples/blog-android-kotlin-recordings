@@ -52,8 +52,8 @@ class ReplayFragment : Fragment() {
         val url = "https://android-di-token-server.netlify.app/api/getRecordings/"
         val queue = Volley.newRequestQueue(PodcastApplication.applicationContext())
         val gson = GsonBuilder().setPrettyPrinting().create() // Used for json pretty print
-        val request = JsonArrayRequest(
-            Request.Method.GET,
+        val request = object: JsonArrayRequest(
+            Request.Method.POST,
             url,
             null,
             {
@@ -74,7 +74,13 @@ class ReplayFragment : Fragment() {
             {
                 Log.e("ReplayFragment", it.localizedMessage)
             }
-        )
+        ) {
+            override fun getHeaders(): MutableMap<String, String> {
+                val headers = HashMap<String, String>()
+                headers["appidentifier"] = PodcastApplication.applicationContext().packageName
+                return headers
+            }
+        }
 
         queue.add(request)
     }

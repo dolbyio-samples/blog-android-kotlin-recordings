@@ -54,8 +54,7 @@ class LiveSessionFragment : Fragment() {
         val url = "https://android-di-token-server.netlify.app/api/getConferencesInfo/"
         val queue = Volley.newRequestQueue(PodcastApplication.applicationContext())
         val gson = GsonBuilder().setPrettyPrinting().create()
-
-        val request = JsonObjectRequest(
+        val request = object: JsonObjectRequest(
             Request.Method.GET,
             url,
             null,
@@ -79,7 +78,13 @@ class LiveSessionFragment : Fragment() {
             {
                 Log.e("LiveSessionFragment", it.localizedMessage)
             }
-        )
+        ) {
+            override fun getHeaders(): MutableMap<String, String> {
+                val headers = HashMap<String, String>()
+                headers["appidentifier"] = PodcastApplication.applicationContext().packageName
+                return headers
+            }
+        }
         queue.add(request)
     }
 
