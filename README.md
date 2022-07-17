@@ -14,9 +14,10 @@ https://dolby.io/blog/build-a-podcast-recording-app-for-android-using-the-dolby-
 
 Star or watch this repository so you won't forget about it when we push updates.
 
-1. Clone the repository
-2. Open project in Android Studio
-3. Run in emulator or on a device to experience audio/video
-
+1. Clone this repository
+2. Setup Serverless functions on Netlify -- see [./server/README.md](./server/README.md) for instructions.
+4. Open the projejct in Android Studio.
+5. Update **ConferenceSession.kt**, **LiveSessionFragment.kt**, and **ReplayFragment.kt** with your Netlify function URLs you deployed.
+6. Build the project and run it in an emulator.  *NOTE: To experience audio/video you will need to load onto a physical mobile device.*
 
 
