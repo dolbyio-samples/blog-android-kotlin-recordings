@@ -51,7 +51,7 @@ class LiveSessionFragment : Fragment() {
     }
 
     private fun fetchConferences() {
-        val url = "https://android-di-token-server.netlify.app/api/getConferencesInfo/"
+        val url = "https://your-token-server.netlify.app/api/getConferencesInfo/"
         val queue = Volley.newRequestQueue(PodcastApplication.applicationContext())
         val gson = GsonBuilder().setPrettyPrinting().create()
         val request = object: JsonObjectRequest(
