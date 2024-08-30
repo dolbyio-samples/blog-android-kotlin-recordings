@@ -1,6 +1,6 @@
-[![License](https://img.shields.io/github/license/dolbyio-samples/blog-android-kotlin-recordings)](LICENSE)
+# :warning: This repository is no longer maintained :warning:
 
-![Blog Picture](https://dolby.io/wp-content/uploads/2022/06/Android-Comms-Create-Podcast-Monitor.jpg)
+[![License](https://img.shields.io/github/license/dolbyio-samples/blog-android-kotlin-recordings)](LICENSE)
 
 # Android Podcast Recording Sample App
 
